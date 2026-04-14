@@ -83,15 +83,22 @@ import ContentToc from '../../components/ContentToc.astro';
 
 ---
 
-## Deploying to Cloudflare Pages (Free Hosting)
+## Deploying to Cloudflare Pages (GitHub)
 
-1. Push this folder to a GitHub repo (free at github.com)
-2. Go to pages.cloudflare.com → Create a project → Connect GitHub repo
-3. Build settings:
-   - Build command: `npm run build`
-   - Build output directory: `dist`
-4. Click Deploy — your site is live in ~60 seconds
-5. Every time you push to GitHub, Cloudflare auto-rebuilds and republishes
+Repo: connect this GitHub repository in the Cloudflare dashboard. The first “connect Git” step may not show build fields; set them **after** the project is created.
+
+1. [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → your **Pages** project (not a generic Worker).
+2. **Settings** → **Builds** (or **Build** / build configuration, depending on UI):
+   - **Build command:** `npm run build`
+   - **Build output directory:** `dist`
+   - **Root directory:** leave empty (repo root).
+3. **Settings** → **Variables and Secrets** (or **Environment variables**):
+   - Add **`NODE_VERSION`** = **`20`** for Production (and Preview if you use previews).  
+   - This repo also includes a **`.node-version`** file (`20`) as a hint for compatible Node versions.
+4. **Custom domains:** attach `canetoadfl.com` (and use **Rules → Redirect Rules** if you want `www.canetoadfl.com` → `https://canetoadfl.com`).
+5. Every push to the connected production branch triggers a new build.
+
+Official reference: [Cloudflare Pages — Build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/) (Astro preset uses `npm run build` and `dist`).
 
 ---
 
