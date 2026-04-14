@@ -93,8 +93,9 @@ Repo: connect this GitHub repository in the Cloudflare dashboard. The first “c
    - **Build output directory:** `dist`
    - **Root directory:** leave empty (repo root).
 3. **Settings** → **Variables and Secrets** (or **Environment variables**):
-   - Add **`NODE_VERSION`** = **`20`** for Production (and Preview if you use previews).  
-   - This repo also includes a **`.node-version`** file (`20`) as a hint for compatible Node versions.
+   - Set **`NODE_VERSION`** = **`22`** (or **`22.14.0`**) for Production and Preview. **Astro 6 requires Node `>=22.12.0`**; Node 20 will fail at `astro build`.
+   - If you previously set `NODE_VERSION=20`, **change or remove** it so it does not override **`.node-version`** in the repo.
+   - This repo includes **`.node-version`** (currently `22.14.0`) for local and CI consistency.
 4. **Custom domains:** attach `canetoadfl.com` (and use **Rules → Redirect Rules** if you want `www.canetoadfl.com` → `https://canetoadfl.com`).
 5. Every push to the connected production branch triggers a new build.
 
