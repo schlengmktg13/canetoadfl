@@ -4,6 +4,14 @@
 
 const { title, description, canonical, schema } = Astro.props;
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+
+const navItems = [
+  { href: '/cane-toad-removal/', label: 'Removal Services' },
+  { href: '/cane-toad-florida/', label: 'About Cane Toads' },
+  { href: '/cane-toad-removal-cost/', label: 'Pricing' },
+  { href: '/cane-toad-dog-poisoning/', label: 'Dog Safety' },
+  { href: '/providers/', label: 'For Providers' },
+] as const;
 ---
 
 <!DOCTYPE html>
@@ -90,6 +98,49 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
     .nav-links { display: flex; gap: 1.5rem; list-style: none; }
     .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.95rem; }
     .nav-links a:hover { color: #fff; text-decoration: none; }
+
+    /* Mobile nav (hidden on desktop) */
+    .nav-mobile {
+      display: none;
+      position: relative;
+    }
+    .nav-mobile-summary {
+      list-style: none;
+      cursor: pointer;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.45rem 0.85rem;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 6px;
+      user-select: none;
+    }
+    .nav-mobile-summary::-webkit-details-marker { display: none; }
+    .nav-mobile-links {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 0.5rem);
+      min-width: min(100vw - 2rem, 280px);
+      list-style: none;
+      background: var(--green-dark);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 0.35rem 0;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+      z-index: 200;
+    }
+    .nav-mobile-links a {
+      display: block;
+      padding: 0.75rem 1.15rem;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    .nav-mobile-links a:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      text-decoration: none;
+    }
 
     /* MAIN */
     main {
@@ -303,6 +354,7 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
     @media (max-width: 640px) {
       .hero-copy h1 { font-size: 1.6rem; }
       .nav-links { display: none; }
+      .nav-mobile { display: block; }
     }
   </style>
 </head>
@@ -311,12 +363,18 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toStri
 <header>
   <nav>
     <a href="/" class="nav-logo">🐸 CaneToadFL</a>
+    <details class="nav-mobile">
+      <summary class="nav-mobile-summary" aria-label="Open site menu">Menu</summary>
+      <ul class="nav-mobile-links">
+        {navItems.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </details>
     <ul class="nav-links">
-      <li><a href="/cane-toad-removal/">Removal Services</a></li>
-      <li><a href="/cane-toad-florida/">About Cane Toads</a></li>
-      <li><a href="/cane-toad-removal-cost/">Pricing</a></li>
-      <li><a href="/cane-toad-dog-poisoning/">Dog Safety</a></li>
-      <li><a href="/providers/">For Providers</a></li>
+      {navItems.map((item) => (
+        <li><a href={item.href}>{item.label}</a></li>
+      ))}
     </ul>
   </nav>
 </header>
