@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does cane toad removal usually cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typical South Florida pricing is about $120-$190 for an initial visit and about $100-$170 per month for recurring maintenance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is recurring service worth it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For many homes, yes. Reinfestation pressure from nearby properties often makes recurring visits more effective than repeated one-time calls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What factors increase pricing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Larger properties, high toad density, complex landscaping, and emergency scheduling can all increase total cost."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Cane Toad Removal Cost in Florida: Typical Pricing by Service Type"
+  description="Cane toad removal cost guide for South Florida homeowners. Compare one-time, emergency, and recurring service pricing and learn what affects total monthly cost."
+  schema={schema}
+>
+  <div class="urgency">
+    <strong>⚠️ Pet safety first:</strong> If exposure already happened, go to
+    <a href="/cane-toad-dog-poisoning/"> the emergency guide</a>.
+  </div>
+
+  <div class="hero">
+    <h1>Cane Toad Removal Cost in South Florida</h1>
+    <p>Most homeowners pay for an initial cleanup plus recurring visits. Exact pricing depends on property size, density of toads, and whether emergency response is needed.</p>
+    <a href="/cane-toad-removal/" class="btn btn-lg">Get a Local Quote →</a>
+  </div>
+
+  <div class="content">
+    <h2>Typical Price Ranges</h2>
+    <ul>
+      <li><strong>Initial visit:</strong> about $120-$190</li>
+      <li><strong>Recurring monthly service:</strong> about $100-$170/month</li>
+      <li><strong>Emergency/same-night visit:</strong> can be significantly higher</li>
+      <li><strong>Larger properties:</strong> usually priced per visit by acreage</li>
+    </ul>
+
+    <h2>What Drives the Cost</h2>
+    <ul>
+      <li>Lot size and landscaping complexity</li>
+      <li>Standing water features and irrigation patterns</li>
+      <li>Frequency of visits needed during peak season</li>
+      <li>Whether egg-string removal and prevention planning are included</li>
+    </ul>
+
+    <h2>One-Time vs Recurring Service</h2>
+    <p>A single visit can quickly reduce numbers, but neighboring populations often repopulate yards. Recurring service is usually more cost-efficient than repeated emergency calls over time.</p>
+
+    <h2>How to Get Better Value</h2>
+    <ul>
+      <li>Ask for a written scope of services.</li>
+      <li>Confirm if nighttime collection is included.</li>
+      <li>Check whether egg removal is part of the plan.</li>
+      <li>Pair professional visits with habitat fixes at home.</li>
+    </ul>
+    <p>Already seeing toads? <a href="/cane-toad-removal/">Connect with a removal pro →</a></p>
+
+    <h2>Related Pages</h2>
+    <ul>
+      <li><a href="/cane-toad-florida/">Cane Toad Florida guide</a></li>
+      <li><a href="/how-to-get-rid-of-cane-toads/">DIY control options</a></li>
+      <li><a href="/toad-proof-fencing/">Toad-proof fencing</a></li>
+    </ul>
+
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details>
+        <summary>How much does cane toad removal usually cost?</summary>
+        <p>Most homeowners see initial pricing around $120-$190 and monthly maintenance around $100-$170 depending on property conditions.</p>
+      </details>
+      <details>
+        <summary>Is recurring service worth it?</summary>
+        <p>Usually yes, especially in neighborhoods with steady reinfestation pressure from surrounding properties.</p>
+      </details>
+      <details>
+        <summary>What factors increase pricing?</summary>
+        <p>Large lots, dense landscaping, severe activity, and emergency scheduling can all raise cost.</p>
+      </details>
+    </div>
+  </div>
+</BaseLayout>

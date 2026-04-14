@@ -1,0 +1,22 @@
+---
+interface TocItem {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  title?: string;
+  items: TocItem[];
+}
+
+const { title = 'In This Guide', items } = Astro.props as Props;
+---
+
+<section class="toc-card" aria-label="Table of contents">
+  <strong class="toc-title">{title}</strong>
+  <ol class="toc-list">
+    {items.map((item) => (
+      <li><a href={item.href}>{item.label}</a></li>
+    ))}
+  </ol>
+</section>

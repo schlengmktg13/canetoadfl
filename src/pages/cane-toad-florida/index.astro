@@ -1,0 +1,208 @@
+---
+// src/pages/cane-toad-florida/index.astro
+// PILLAR PAGE — targets: "cane toad florida" (5,000/mo)
+// This is the hub for all informational content — every info page links back here
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentToc from '../../components/ContentToc.astro';
+import ContentImage from '../../components/ContentImage.astro';
+import canetoadLandscape from '../../assets/images/canetoad-landscape.jpg';
+import caneVsSouthernField from '../../assets/images/cane-vs-southern-field.jpg';
+
+const tocItems = [
+  { href: '#what-is', label: 'What is a cane toad?' },
+  { href: '#identification', label: 'How to identify cane toads in Florida' },
+  { href: '#where', label: 'Where cane toads live in Florida' },
+  { href: '#danger', label: 'Why cane toads are dangerous' },
+  { href: '#pets', label: 'Cane toads and pets' },
+  { href: '#season', label: 'Cane toad season in Florida' },
+  { href: '#removal', label: 'How to get rid of cane toads' },
+  { href: '#professional', label: 'When to call a professional' },
+  { href: '#faq', label: 'Frequently asked questions' },
+];
+---
+ 
+<BaseLayout
+  title="Cane Toads in Florida: The Complete Guide (2026)"
+  description="Everything Florida homeowners need to know about cane toads — identification, dangers to pets, where they live, how to remove them, and when to call a professional."
+>
+ 
+  <div class="urgency">
+    <strong>⚠️ Have a dog?</strong> Cane toad toxin can kill a dog in as little as 15 minutes.
+    <a href="/cane-toad-dog-poisoning/">Read the emergency response guide →</a>
+  </div>
+ 
+  <div class="hero">
+    <h1>Cane Toads in Florida: The Complete Guide</h1>
+    <p>Cane toads are one of South Florida's most dangerous invasive species — a serious threat to pets, native wildlife, and local ecosystems. This guide covers everything homeowners need to know: how to identify them, where they live, what makes them dangerous, and how to get rid of them.</p>
+    <a href="/cane-toad-removal/" class="btn">Find a Removal Professional →</a>
+  </div>
+ 
+  <div class="content">
+ 
+    <ContentToc items={tocItems} />
+ 
+    <h2 id="what-is">What Is a Cane Toad?</h2>
+    <p>The cane toad (<em>Rhinella marina</em>, formerly <em>Bufo marinus</em>) is a large, terrestrial toad native to Central and South America. It is also commonly called the bufo toad, giant toad, or marine toad. In Florida, "cane toad" and "bufo toad" are used interchangeably — they refer to the same species.</p>
+    <p>Cane toads were deliberately introduced to Florida in the 1950s and 1960s, primarily through the sugar cane industry (hence the name) and the pet trade. Without natural predators in Florida, populations have grown steadily for decades and are now firmly established across South Florida.</p>
+    <p>They are considered one of the world's worst invasive species by the International Union for Conservation of Nature (IUCN) — not just in Florida, but globally across every region where they've been introduced.</p>
+
+    <figure class="content-figure">
+      <ContentImage
+        src={canetoadLandscape}
+        alt="Adult cane toad in South Florida outdoor habitat — large invasive bufo toad on soil and leaf litter"
+      />
+      <figcaption>Adult cane toads are bulky, often active near moisture and outdoor lights, and much larger than native Florida toads.</figcaption>
+    </figure>
+ 
+    <h2 id="identification">How to Identify Cane Toads in Florida</h2>
+    <p>Correctly identifying a cane toad matters — Florida has several native toad species that look similar and should not be harmed. Here's how to tell them apart:</p>
+
+    <figure class="content-figure">
+      <ContentImage
+        src={caneVsSouthernField}
+        alt="Cane toad and native southern toad shown for scale in Florida — invasive species is visibly larger with different head profile"
+      />
+      <figcaption>When in doubt, treat pet safety as urgent and avoid harming native toads; use our <a href="/cane-toad-vs-southern-toad/">identification guide</a> for a side-by-side checklist.</figcaption>
+    </figure>
+ 
+    <h3>Cane Toad (Rhinella marina) — Invasive</h3>
+    <ul>
+      <li><strong>Size:</strong> 4–6 inches as adults, up to 9 inches in large females — significantly bigger than native species</li>
+      <li><strong>Color:</strong> Brown to grayish-brown, often with darker blotching; belly is cream or yellow with dark mottling</li>
+      <li><strong>Parotoid glands:</strong> Large, prominent, triangular glands on each shoulder — this is the most reliable identification feature. The glands extend from behind the eye down toward the foreleg.</li>
+      <li><strong>No cranial ridges:</strong> The top of the head is smooth, without the raised ridges seen on native toads</li>
+      <li><strong>Posture:</strong> Tends to sit upright rather than crouching flat</li>
+    </ul>
+ 
+    <h3>Southern Toad (Anaxyrus terrestris) — Native, Do Not Harm</h3>
+    <ul>
+      <li><strong>Size:</strong> 2–3.5 inches — noticeably smaller than cane toads</li>
+      <li><strong>Cranial ridges:</strong> Prominent raised ridges on top of the head with knobs at the rear — the key distinguishing feature</li>
+      <li><strong>Parotoid glands:</strong> Present but smaller and more oval-shaped than cane toads</li>
+    </ul>
+    <p>When in doubt: if the toad fits in your hand, it's probably a southern toad. If it fills your hand or spills over, it's almost certainly a cane toad. <a href="/cane-toad-vs-southern-toad/">See our full identification guide with photos →</a></p>
+ 
+    <h2 id="where">Where Cane Toads Live in Florida</h2>
+    <p>Cane toads thrive in exactly the kind of environment that defines South Florida suburban living — warm, humid, with irrigated landscaping, swimming pools, outdoor lighting, and minimal natural predators.</p>
+ 
+    <h3>Geographic Range</h3>
+    <p>Cane toads are firmly established throughout South Florida, including all of Miami-Dade, Broward, Palm Beach, Collier, and Lee counties. They are spreading northward along both coasts and have been documented as far north as Orlando, though populations thin out significantly above the frost line.</p>
+ 
+    <h3>Preferred Habitats</h3>
+    <ul>
+      <li>Suburban yards with irrigation and ground-level water sources</li>
+      <li>Pool cages and lanais — warm, humid microenvironments</li>
+      <li>Near outdoor lighting, which attracts the insects they feed on</li>
+      <li>Golf courses, parks, and canal edges</li>
+      <li>HOA communities with shared green space and lakes</li>
+    </ul>
+ 
+    <h3>What Attracts Them to Your Property</h3>
+    <p>Cane toads are primarily attracted to food and water. Outdoor pet food bowls are a major attractant — cane toads will feed from them directly. Outdoor lighting attracts insects, which attract toads. Standing water — bird baths, plant saucers, low spots in the yard — provides the moisture they need to survive and the water they need to breed.</p>
+ 
+    <h2 id="danger">Why Cane Toads Are Dangerous</h2>
+ 
+    <h3>Danger to Pets</h3>
+    <p>The most immediate danger cane toads pose in residential settings is to dogs and cats. Cane toads secrete a potent bufotoxin from the large parotoid glands on their shoulders. When a pet bites, licks, or mouths a cane toad, this toxin is rapidly absorbed through the mucous membranes of the mouth and gums.</p>
+    <p>The toxin affects the heart and nervous system simultaneously. In dogs, poisoning can progress from excessive drooling to seizures to cardiac arrest in as little as 15 minutes in severe cases. <a href="/cane-toad-dog-poisoning/">Read the full pet safety guide →</a></p>
+ 
+    <h3>Danger to Native Wildlife</h3>
+    <p>Cane toads outcompete native frog and toad species for food, habitat, and breeding sites. They also prey on native species directly — they will eat anything that fits in their mouth, including small native frogs, lizards, and invertebrates. Predators that attempt to eat cane toads — snakes, birds, small mammals — are often killed by the toxin, disrupting the food web further.</p>
+ 
+    <h3>Ecological Impact</h3>
+    <p>The FWC considers cane toads a priority invasive species and encourages humane removal. Unlike many invasive species debates, there is strong scientific consensus that cane toad removal is ecologically beneficial.</p>
+ 
+    <h2 id="pets">Cane Toads and Pets: What Every Florida Dog Owner Needs to Know</h2>
+    <p>Dogs are by far the most at-risk domestic animals because of their tendency to pick up, mouth, or investigate toads with their noses and mouths. Small dogs and puppies are most vulnerable due to their size, but large dogs have also died from cane toad poisoning.</p>
+ 
+    <h3>Symptoms of Cane Toad Poisoning in Dogs</h3>
+    <ul>
+      <li>Excessive drooling or foaming at the mouth</li>
+      <li>Pawing at the mouth or face</li>
+      <li>Bright red gums</li>
+      <li>Head shaking</li>
+      <li>Disorientation or loss of coordination</li>
+      <li>Seizures</li>
+      <li>Irregular heartbeat</li>
+    </ul>
+ 
+    <h3>Immediate Response</h3>
+    <p>If you suspect your dog has encountered a cane toad: rinse their mouth thoroughly with a garden hose for 10 minutes, directing water sideways out of the mouth (not down the throat). Then go to an emergency vet immediately — do not wait to see if symptoms develop. Speed is critical. <a href="/cane-toad-dog-poisoning/">Full emergency protocol →</a></p>
+ 
+    <h2 id="season">Cane Toad Season in Florida</h2>
+    <p>Cane toads are present year-round in South Florida, but activity follows a clear seasonal pattern tied to temperature and rainfall.</p>
+ 
+    <h3>Peak Season: May – October</h3>
+    <p>Activity surges dramatically with the first summer rains, typically in May or June. Warm, wet conditions trigger breeding, and adult toad populations are supplemented by newly metamorphosed juveniles from spring. This is when most toad encounters — and most pet poisonings — occur.</p>
+ 
+    <h3>Off Season: November – April</h3>
+    <p>Cooler, drier months see significantly reduced activity. Toads become less active and may shelter in ground cover, mulch, or under debris. However, South Florida's mild winters mean toads remain active on warm nights even in January and February — a meaningful difference from Central and North Florida, where toads essentially disappear in winter.</p>
+ 
+    <h3>Breeding</h3>
+    <p>Cane toads breed in standing water — ponds, lakes, canals, pools, and any other body of water available. A single female can lay 8,000–35,000 eggs in a clutch, appearing as long strings of black eggs in a clear jelly strand. Eggs hatch within 48–72 hours. Tadpoles metamorphose in 45–65 days. This rapid reproduction cycle is a major reason populations are so difficult to control without professional help.</p>
+ 
+    <h2 id="removal">How to Get Rid of Cane Toads</h2>
+ 
+    <h3>DIY Methods</h3>
+    <p>The most effective DIY approach is hand collection at night, when toads are most active. Wear thick rubber gloves — the toxin can irritate skin and eyes. Collect toads into a sealed container. The FWC recommends euthanizing collected toads humanely using benzocaine-based products (like Orajel) applied to the belly, which causes sedation before death.</p>
+    <p>Other helpful steps:</p>
+    <ul>
+      <li>Remove outdoor pet food bowls at night</li>
+      <li>Reduce outdoor lighting or switch to yellow/amber bulbs that attract fewer insects</li>
+      <li>Eliminate standing water — empty plant saucers, fix drainage issues</li>
+      <li>Keep grass short and reduce ground cover where toads shelter during the day</li>
+    </ul>
+    <p><a href="/how-to-get-rid-of-cane-toads/">Full DIY removal guide →</a></p>
+ 
+    <h3>Traps</h3>
+    <p>Cane toad traps can supplement hand collection, particularly for ongoing population management. Most effective traps use light to attract insects, which in turn attract toads. <a href="/cane-toad-trap/">See our trap recommendations →</a></p>
+ 
+    <h3>Repellents</h3>
+    <p>Commercial cane toad repellents exist but have limited effectiveness as a standalone solution — they're best used as a deterrent after professional removal has reduced the population. <a href="/cane-toad-repellent/">See repellent options →</a></p>
+ 
+    <h3>Barrier Fencing</h3>
+    <p>Physical exclusion barriers around pool cages, lanais, and yard perimeters can prevent toads from entering specific areas. This is particularly effective for protecting the immediate area around a pool or lanai where pets spend time at night. <a href="/toad-proof-fencing/">See toad-proof fencing options →</a></p>
+ 
+    <h2 id="professional">When to Call a Professional</h2>
+    <p>DIY removal can significantly reduce toad populations but has real limitations. Professional removal makes sense when:</p>
+    <ul>
+      <li>You have dogs or other vulnerable pets and need rapid, thorough population reduction</li>
+      <li>You're seeing large numbers of toads regularly (10+ per night)</li>
+      <li>You have water features, a pool, or canal frontage that provides ongoing breeding habitat</li>
+      <li>DIY efforts haven't kept pace with the population</li>
+      <li>You want ongoing maintenance rather than periodic intensive effort</li>
+    </ul>
+    <p>Licensed providers perform night-time collection visits, remove egg strings from water features, and can advise on property-specific habitat modifications. Recurring monthly service is the most effective long-term solution for properties with persistent toad pressure.</p>
+    <a href="/cane-toad-removal/" class="btn">Find a Licensed Provider in Your Area →</a>
+ 
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <div class="faq">
+      <details>
+        <summary>Are cane toads poisonous to humans?</summary>
+        <p>Cane toads are not typically dangerous to healthy adults, but the toxin can cause skin and eye irritation. Always wash hands thoroughly after handling a cane toad. The toxin is dangerous if ingested — keep children from touching toads and wash any surfaces that toads have been in contact with. <a href="/are-cane-toads-poisonous/">Full guide to cane toad toxicity →</a></p>
+      </details>
+      <details>
+        <summary>Are cane toads the same as bufo toads?</summary>
+        <p>Yes — "bufo toad" is a common nickname for the cane toad derived from its former scientific name <em>Bufo marinus</em> (now reclassified as <em>Rhinella marina</em>). You'll hear both names used interchangeably across South Florida.</p>
+      </details>
+      <details>
+        <summary>What do cane toad eggs look like?</summary>
+        <p>Cane toad eggs appear as long strings of small black eggs encased in a clear, gelatinous strand — resembling a beaded necklace. You'll find them floating in or at the edges of any standing water on your property. They hatch within 48–72 hours. <a href="/cane-toad-eggs/">More about cane toad eggs →</a></p>
+      </details>
+      <details>
+        <summary>Is it legal to kill cane toads in Florida?</summary>
+        <p>Yes. The Florida Fish and Wildlife Conservation Commission (FWC) classifies cane toads as an invasive species and encourages their humane removal. There is no closed season, bag limit, or permit required for removal on private property. The FWC does require humane euthanasia methods.</p>
+      </details>
+      <details>
+        <summary>How do I keep cane toads out of my yard?</summary>
+        <p>The most effective preventive measures are: removing outdoor pet food at night, reducing outdoor lighting, eliminating standing water, keeping grass short, and installing toad-proof fencing around high-risk areas like pool cages and lanais. <a href="/toad-proof-fencing/">See fencing options →</a></p>
+      </details>
+      <details>
+        <summary>Which Florida counties have the worst cane toad problems?</summary>
+        <p>Miami-Dade, Broward, and Palm Beach counties have the highest cane toad populations due to the density of suburban development, year-round warmth, and abundant water features. Collier and Lee counties on the Gulf Coast also have significant populations. The problem is present but less severe north of Palm Beach County.</p>
+      </details>
+    </div>
+ 
+  </div>
+ 
+</BaseLayout>

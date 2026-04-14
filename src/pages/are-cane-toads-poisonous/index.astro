@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentImage from '../../components/ContentImage.astro';
+import canetoadCloseupPoison from '../../assets/images/canetoad-closeup.jpg';
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are cane toads poisonous to dogs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Cane toad toxin can cause severe poisoning in dogs and requires immediate first aid and emergency veterinary care."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are cane toads dangerous to humans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Human exposure is usually less severe than pet exposure but can cause skin and eye irritation, so handling should be avoided."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do after pet exposure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rinse the mouth from the side and go to an emergency vet immediately."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Are Cane Toads Poisonous? What Florida Homeowners Need to Know"
+  description="Are cane toads poisonous? Learn how cane toad toxin affects dogs, cats, wildlife, and people, plus immediate safety steps for Florida households."
+  schema={schema}
+>
+  <div class="urgency">
+    <strong>⚠️ Dog exposure is an emergency:</strong>
+    <a href="/cane-toad-dog-poisoning/">See immediate response steps →</a>
+  </div>
+  <div class="hero">
+    <h1>Are Cane Toads Poisonous?</h1>
+    <p>Yes. Cane toads secrete a potent toxin that is especially dangerous to dogs and cats. Human exposure usually causes irritation, but pet exposure can become life-threatening quickly.</p>
+    <a href="/cane-toad-removal/" class="btn btn-lg">Reduce Risk at Home →</a>
+  </div>
+  <div class="content">
+    <h2>Who Is Most at Risk?</h2>
+    <ul>
+      <li><strong>Dogs:</strong> highest risk due to mouthing behavior.</li>
+      <li><strong>Cats:</strong> less common but still vulnerable.</li>
+      <li><strong>Wildlife:</strong> predatory species may be harmed.</li>
+      <li><strong>Humans:</strong> usually skin/eye irritation, avoid handling.</li>
+    </ul>
+    <h2>How Poisoning Happens</h2>
+    <p>Toxin from glands behind the toad's head is absorbed through mouth tissues. Severity depends on contact amount and response speed.</p>
+
+    <figure class="content-figure">
+      <ContentImage
+        src={canetoadCloseupPoison}
+        alt="Close view of a cane toad showing large parotoid toxin glands behind the eyes — the source of dangerous bufo toxin"
+      />
+      <figcaption>Dogs most often envenomate themselves by mouthing the toad; the glands release milky toxin on pressure.</figcaption>
+    </figure>
+
+    <h2>Safety Steps for Homeowners</h2>
+    <ul>
+      <li>Supervise pets after dark.</li>
+      <li>Remove outdoor pet bowls at night.</li>
+      <li>Reduce yard attractants and standing water.</li>
+      <li>Use professional removal when activity is persistent.</li>
+    </ul>
+    <p>Already seeing toads? <a href="/cane-toad-removal/">Connect with a removal pro →</a></p>
+    <p>For full species background: <a href="/cane-toad-florida/">Cane Toad Florida →</a>.</p>
+
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details>
+        <summary>Are cane toads poisonous to dogs?</summary>
+        <p>Yes. They can cause severe, fast-moving poisoning in dogs after mouth contact.</p>
+      </details>
+      <details>
+        <summary>Are cane toads dangerous to humans?</summary>
+        <p>Usually less severe than pet exposure, but contact can irritate skin and eyes. Avoid handling directly.</p>
+      </details>
+      <details>
+        <summary>What should I do after pet exposure?</summary>
+        <p>Rinse the mouth from the side and go to an emergency veterinarian immediately.</p>
+      </details>
+    </div>
+  </div>
+</BaseLayout>

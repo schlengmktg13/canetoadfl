@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://canetoadfl.com/sitemap-index.xml

@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentImage from '../../components/ContentImage.astro';
+import nightCollection from '../../assets/images/cane-toad-night-collection.png';
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the fastest way to reduce cane toads in a yard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Remove attractants, do consistent nighttime collection, and use professional removal if activity is persistent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do repellents alone solve cane toad problems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually no. Repellents are most effective as one part of a broader control plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I call a professional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call a professional if you are seeing toads nightly, have pet safety concerns, or DIY efforts are not reducing activity."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="How to Get Rid of Cane Toads: Practical DIY Steps for Florida Yards"
+  description="How to get rid of cane toads safely in South Florida. Learn nighttime collection, habitat reduction, and when to call professional cane toad removal services."
+  schema={schema}
+>
+  <div class="urgency">
+    <strong>⚠️ Dog owner warning:</strong> Cane toad toxin can act fast.
+    <a href="/cane-toad-dog-poisoning/">Emergency response guide →</a>
+  </div>
+
+  <div class="hero">
+    <h1>How to Get Rid of Cane Toads</h1>
+    <p>This guide covers practical DIY control methods you can start tonight, plus the situations where professional removal is the safer and faster option.</p>
+    <a href="/cane-toad-removal/" class="btn btn-lg">Get Professional Help →</a>
+  </div>
+
+  <div class="content">
+    <h2>Step 1: Remove What Attracts Toads</h2>
+    <ul>
+      <li>Bring pet food and water bowls inside at night.</li>
+      <li>Reduce bright outdoor lighting where possible.</li>
+      <li>Eliminate standing water and improve drainage.</li>
+      <li>Trim heavy ground cover and keep grass shorter.</li>
+    </ul>
+
+    <h2>Step 2: Night Collection</h2>
+    <p>Toads are most active after dark. With gloves and a light, inspect high-risk areas like pool edges, shrub lines, and damp corners. Collection consistency matters more than one large effort.</p>
+
+    <figure class="content-figure">
+      <ContentImage
+        src={nightCollection}
+        alt="Collecting cane toads at night with a light along a Florida yard edge — when invasive toads are most active"
+      />
+      <figcaption>Night inspections along moisture lines and fencing are the most practical DIY collection window.</figcaption>
+    </figure>
+
+    <h2>Step 3: Prevent Re-Entry</h2>
+    <p>Barrier upgrades and landscape adjustments reduce reinfestation pressure. Properties with recurring activity often benefit from toad-proof exclusion around pet zones.</p>
+    <p><a href="/toad-proof-fencing/">See fencing options →</a></p>
+
+    <h2>When DIY Is Not Enough</h2>
+    <ul>
+      <li>You are seeing toads nightly.</li>
+      <li>You have a dog and want rapid risk reduction.</li>
+      <li>Your property includes water features or canals.</li>
+      <li>DIY efforts are not keeping numbers down.</li>
+    </ul>
+    <p>Already seeing toads? <a href="/cane-toad-removal/">Connect with a removal pro →</a></p>
+
+    <h2>Keep Learning</h2>
+    <ul>
+      <li><a href="/cane-toad-florida/">Cane Toad Florida complete guide</a></li>
+      <li><a href="/cane-toad-trap/">Cane toad trap guide</a></li>
+      <li><a href="/cane-toad-repellent/">Repellent guide</a></li>
+    </ul>
+
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details>
+        <summary>What's the fastest way to reduce cane toads in a yard?</summary>
+        <p>Start with attractant removal and consistent nighttime collection. If activity remains high, professional removal is usually the fastest way to lower risk.</p>
+      </details>
+      <details>
+        <summary>Do repellents alone solve cane toad problems?</summary>
+        <p>Usually not. Repellents can help in targeted areas, but long-term control normally requires habitat reduction and ongoing removal.</p>
+      </details>
+      <details>
+        <summary>When should I call a professional?</summary>
+        <p>If you are seeing toads nightly, have pets at risk, or DIY efforts are not keeping pace, professional service is the right next step.</p>
+      </details>
+    </div>
+  </div>
+</BaseLayout>

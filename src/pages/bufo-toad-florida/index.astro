@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContentImage from '../../components/ContentImage.astro';
+import bufoComparison from '../../assets/images/canetoad-southern-comparison-lg.jpg';
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are bufo toads and cane toads the same?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In Florida, bufo toad and cane toad are two names for the same invasive species."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are bufo toads common in Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are widespread in South Florida counties, especially in warm suburban areas with irrigation and water features."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best way to reduce bufo toad risk at home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a combination of habitat reduction, pet supervision at night, and professional removal when activity is persistent."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title="Bufo Toad Florida Guide: Identification, Risk, and Removal"
+  description="Bufo toad Florida guide for homeowners. Learn how to identify invasive bufo toads, protect pets, and connect with licensed cane toad removal providers in South Florida."
+  schema={schema}
+>
+  <div class="urgency">
+    <strong>⚠️ Have a dog?</strong> Bufo toad toxin can become life-threatening quickly.
+    <a href="/cane-toad-dog-poisoning/">Read emergency steps →</a>
+  </div>
+
+  <div class="hero">
+    <h1>Bufo Toads in Florida: What Homeowners Need to Know</h1>
+    <p>"Bufo toad" is the common name many South Florida residents use for cane toads. This page explains what they are, why they are dangerous for pets, and how to reduce risk on your property.</p>
+    <a href="/cane-toad-removal/" class="btn btn-lg">Find a Removal Pro →</a>
+  </div>
+
+  <div class="content">
+    <h2>Are Bufo Toads and Cane Toads the Same?</h2>
+    <p>Yes. In Florida, "bufo toad" and "cane toad" refer to the same invasive species (<em>Rhinella marina</em>). The name "bufo" comes from the older scientific name <em>Bufo marinus</em>.</p>
+    <p>Already seeing toads? <a href="/cane-toad-removal/">Connect with a removal pro →</a></p>
+
+    <h2>Why Bufo Toads Are a Serious Florida Problem</h2>
+    <ul>
+      <li>Toxin exposure can cause severe poisoning in dogs and cats.</li>
+      <li>They reproduce quickly in neighborhood water features.</li>
+      <li>They thrive in warm, irrigated suburban landscapes common in South Florida.</li>
+    </ul>
+
+    <h2>How to Identify a Bufo Toad</h2>
+    <p>Adults are large and stocky, usually brown to gray, with large toxin glands behind the eyes. They are often active at night around lights, pet food bowls, and damp landscaping.</p>
+
+    <figure class="content-figure">
+      <ContentImage
+        src={bufoComparison}
+        alt="Large invasive bufo cane toad next to smaller native southern toad for identification reference in Florida"
+      />
+      <figcaption>Bufo cane toads dwarf most native toads; mistaken identity puts pets and native species at risk.</figcaption>
+    </figure>
+
+    <p>Need a comparison with native species? <a href="/cane-toad-vs-southern-toad/">See cane toad vs southern toad →</a></p>
+
+    <h2>What to Do If Your Dog Mouths a Bufo Toad</h2>
+    <ol>
+      <li>Rinse your dog's mouth from the side for 10-15 minutes.</li>
+      <li>Keep water flowing out of the mouth, not down the throat.</li>
+      <li>Go to an emergency vet immediately.</li>
+    </ol>
+    <p><a href="/cane-toad-dog-poisoning/">Full emergency guide →</a></p>
+
+    <h2>Long-Term Control for Florida Homes</h2>
+    <p>Most homeowners need a combination of habitat reduction and ongoing removal visits during peak season. Professional services are usually the fastest path to reducing exposure risk.</p>
+    <p>For the full ecosystem and prevention context, visit the pillar page: <a href="/cane-toad-florida/">Cane Toad Florida guide →</a></p>
+
+    <h2>FAQ</h2>
+    <div class="faq">
+      <details><summary>Are bufo toads legal to remove in Florida?</summary><p>Yes. They are invasive, and humane removal is encouraged.</p></details>
+      <details><summary>Where are bufo toads most common?</summary><p>They are widespread across South Florida counties, especially in suburban neighborhoods with water and irrigation.</p></details>
+      <details><summary>Can one removal visit solve the problem?</summary><p>One visit helps, but recurring maintenance is usually needed for sustained control.</p></details>
+    </div>
+  </div>
+</BaseLayout>
