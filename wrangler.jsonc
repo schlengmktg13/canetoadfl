@@ -1,0 +1,9 @@
+{
+  // Serves the static Astro build (HTML + /_astro/* images and CSS).
+  // Default routing: static files first, so /_astro/*.webp resolves from ./dist.
+  "name": "canetoadfl",
+  "compatibility_date": "2026-04-14",
+  "assets": {
+    "directory": "./dist"
+  }
+}

@@ -101,6 +101,10 @@ Repo: connect this GitHub repository in the Cloudflare dashboard. The first “c
 
 Official reference: [Cloudflare Pages — Build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/) (Astro preset uses `npm run build` and `dist`).
 
+### If images/CSS (`/_astro/...`) are broken on `*.workers.dev`
+
+This repo is a **static** Astro site (output in `dist/`, including `dist/_astro/`). A **Worker** that does not attach that folder as [static assets](https://developers.cloudflare.com/workers/static-assets/) will return **404** for `/_astro/*`. The repo includes **`wrangler.jsonc`** with `"assets": { "directory": "./dist" }` so Workers deployments upload and serve those files. If you use **Cloudflare Pages** (static hosting) instead of a Worker app, you only need build output `dist` and do not rely on this file.
+
 ---
 
 ## Adding Your Tally Forms
